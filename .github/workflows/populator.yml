@@ -1,0 +1,9 @@
+name: Populator
+on: push
+jobs:
+  Populate: 
+    runs-on: [ubuntu-latest]
+    name: Populate
+    steps:
+      - name: Run Populator
+      - run: 'echo running populator'
