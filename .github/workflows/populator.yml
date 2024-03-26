@@ -1,5 +1,6 @@
 name: Populator
-on: push
+on: 
+  workflow_dispatch:
 jobs:
   Populate: 
     runs-on: [ubuntu-latest]
