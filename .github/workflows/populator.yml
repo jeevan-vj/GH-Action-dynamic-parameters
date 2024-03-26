@@ -5,6 +5,8 @@ jobs:
     runs-on: [ubuntu-latest]
     name: Populate
     steps:
-      - name: Run Populator
-      - run: |
+     - name: Check out Code
+       uses: actions/checkout@v2
+     - name: Run Populator
+     - run: |
          echo "populating yml"
