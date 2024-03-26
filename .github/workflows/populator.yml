@@ -7,6 +7,7 @@ jobs:
     steps:
      - name: Check out Code
        uses: actions/checkout@v2
+       
      - name: Run Populator
-     - run: |
+       run: |
          echo "populating yml"
