@@ -2,7 +2,7 @@
 
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-SOURCE_YAML_FILE="$SCRIPT_DIR/.github/workflows/release.yml"
+SOURCE_YAML_FILE="$SCRIPT_DIR/../.github/workflows/release.yml"
 
 
 # dynamically generate values.
