@@ -6,4 +6,5 @@ jobs:
     name: Populate
     steps:
       - name: Run Populator
-      - run: 'echo running populator'
+      - run: |
+         echo "populating yml"
