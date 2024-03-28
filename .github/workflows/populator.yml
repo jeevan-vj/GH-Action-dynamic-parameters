@@ -5,6 +5,7 @@ jobs:
   Populate: 
     runs-on: [ubuntu-latest]
     name: Populate
+    environment:GhActionEnvTest
     steps:
      - name: Check out Code
        uses: actions/checkout@v3
