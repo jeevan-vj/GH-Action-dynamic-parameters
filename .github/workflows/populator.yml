@@ -1,27 +1,27 @@
 name: Populator
-on: 
+on:
   workflow_dispatch:
 jobs:
-  Populate: 
+  Populate:
     runs-on: [ubuntu-latest]
     name: Populate
-    environment:GhActionEnvTest
+    environment: GhActionEnvTest
     steps:
-     - name: Check out Code
-       uses: actions/checkout@v3
+      - name: Check out Code
+        uses: actions/checkout@v3
 
-     - name: Run Populator
-       run: ./scripts/populator.sh
+      - name: Run Populator
+        run: ./scripts/populator.sh
 
-     - name: Commit Changes
-       run: |
-         if git diff --quiet; then
-           echo "ℹ️ No changes to update"
-         else
-           git config --global user.email "${{ github.actor }}@email.com }}"
-           git config --global user.name "${{ github.actor }}"
-           git status
-           git add .github/workflows/release.yml
-           git commit -m "✅ Populated option values"
-           git push
-         fi
+      - name: Commit Changes
+        run: |
+          if git diff --quiet; then
+            echo "ℹ️ No changes to update"
+          else
+            git config --global user.email "${{ github.actor }}@email.com }}"
+            git config --global user.name "${{ github.actor }}"
+            git status
+            git add .github/workflows/release.yml
+            git commit -m "✅ Populated option values"
+            git push
+          fi
